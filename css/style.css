@@ -1,10 +1,14 @@
 /* Portfolio Personal CSS */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         
-        body {
+       
+        html, body {
             font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
-        }
+            background-color: #121212; /* exemplo: fundo escuro */
+            margin: 0;
+            padding: 0;
+        }   
         
         .gradient-text {
             background: linear-gradient(90deg, #3b82f6, #8b5cf6);
@@ -63,4 +67,7 @@
             50% { transform: translateY(-15px); }
             100% { transform: translateY(0px); }
         }
-    
+        * {
+            background-color: inherit;
+            color: #030303; /* se quiser forçar o texto claro também */
+        }
