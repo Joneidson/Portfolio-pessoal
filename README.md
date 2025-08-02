@@ -8,7 +8,7 @@ Bem-vindo ao repositório do meu portfólio pessoal! Aqui você encontrará uma 
 
 Este portfólio foi desenvolvido com foco em **performance**, **responsividade** e **design moderno**, utilizando tecnologias como **Tailwind CSS**, **Font Awesome**, e integração de bibliotecas JS.
 
-📍 Acesse: [[`index.html`](./index.html](https://github.com/Joneidson/Portfolio-pessoal/blob/main/index_page.html))
+📍 Acesse: [[`index.html`]([./index.html](https://github.com/Joneidson/Portfolio-pessoal/blob/main/index_page.html)](https://joneidson.github.io/Portfolio-pessoal/))
 
 ---
 
