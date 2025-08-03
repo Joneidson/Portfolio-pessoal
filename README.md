@@ -8,7 +8,9 @@ Bem-vindo ao repositório do meu portfólio pessoal! Aqui você encontrará uma 
 
 Este portfólio foi desenvolvido com foco em **performance**, **responsividade** e **design moderno**, utilizando tecnologias como **Tailwind CSS**, **Font Awesome**, e integração de bibliotecas JS.
 
-📍 Acesse: [index.html][https://joneidson.github.io/Portfolio-pessoal/]
+## 🔗 Acesse o site direto aqui:
+
+[![Ver Portfólio](https://img.shields.io/badge/👨‍💻-Ver%20Portfólio-blue?style=for-the-badge&logo=github)](https://joneidson.github.io/Portfolio-pessoal/)
 
 ---
 
