@@ -1,3 +1,23 @@
+      // modo dia e modo noite 
+      const toggleBtn = document.getElementById("toggle-theme");
+        const html = document.documentElement;
+
+          // Aplica o tema salvo (ao carregar a página)
+          const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "dark") {
+                html.classList.add("dark");
+              toggleBtn.textContent = "🌞";
+            } 
+            else {
+                toggleBtn.textContent = "🌙";
+            }
+
+          // Alterna entre os temas ao clicar no botão
+            toggleBtn.addEventListener("click", () => {
+            const isDark = html.classList.toggle("dark");
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+            toggleBtn.textContent = isDark ? "🌞" : "🌙";
+            });
 
       // Mobile Menu Toggle
       const mobileMenuButton = document.getElementById("mobile-menu-button");

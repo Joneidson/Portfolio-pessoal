@@ -1,84 +1,138 @@
-/* Portfolio Personal CSS */
+/* Importa a fonte 'Poppins' do Google Fonts com pesos variados (300 a 700) */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Importa o Tailwind CSS */
 
-
-html,body {
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-    background-color: #121212;
-    /* exemplo: fundo escuro */
+/* Estilização global para html e body */
+html, body {
+    font-family: 'Poppins', sans-serif;   /* Aplica a fonte Poppins */
+    scroll-behavior: smooth;              /* Suaviza a rolagem entre seções ao clicar em âncoras */
+    background-color: #000000;            /* Fundo claro (amber-100) */
     margin: 0;
     padding: 0;
 }
 
+
+/* Classe para aplicar texto com gradiente */
 .gradient-text {
-    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    background: linear-gradient(90deg, #f59e0b, #d97706);    /* Gradiente amber-500 -> amber-600 */
+    -webkit-background-clip: text;                           /* Necessário para que o gradiente fique "dentro do texto" no Safari */
+    background-clip: text;                                   /* Aplica o gradiente somente na área do texto */
+    color: transparent;                                      /* Torna a cor do texto transparente, mostrando só o gradiente */
 }
 
+/* Estilo ao passar o mouse sobre os cards de projeto */
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateY(-10px);                            /* Move o card 10px para cima (efeito de destaque) */
+    box-shadow: 0 20px 50px 5px rgba(146, 64, 14, 0.90),     /* Sombra principal forte (amber-700) */
+                0 10px 30px -5px rgba(120, 53, 15, 0.04);     /* Sombra adicional leve (amber-800) */
 }
 
+/* Barra de fundo (base) das habilidades */
 .skill-bar {
-    height: 8px;
-    border-radius: 4px;
-    background: #e5e7eb;
+    height: 8px;                            /* Altura da barra */
+    border-radius: 4px;                     /* Cantos arredondados */
+    background: #d6d3d1;                    /* Cor clara (stone-300 do Tailwind) */
 }
 
+
+/* Barra de progresso preenchida */
 .skill-progress {
-    height: 100%;
-    border-radius: 4px;
-    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-    transition: width 1s ease-in-out;
+    height: 100%;                                                 /* Ocupa toda a altura da skill-bar */
+    border-radius: 4px;                                           /* Cantos arredondados iguais */
+    background: linear-gradient(90deg, #f59e0b, #d97706);         /* Gradiente amber-500 -> amber-600 */
+    transition: width 1s ease-in-out;                             /* Animação suave da largura ao ser alterada */
 }
 
+/* Estilo dos links da navbar */
 .nav-link {
-    position: relative;
+    position: relative;         /* Necessário para posicionar o ::after corretamente */
 }
 
+/* Linha inferior animada nos links do menu */
 .nav-link::after {
-    content: '';
+    content: '';                                              /* Cria uma "linha" usando pseudo-elemento */
     position: absolute;
-    width: 0;
+    width: 0;                                                 /* Começa sem largura (invisível) */
     height: 2px;
     bottom: -2px;
     left: 0;
-    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-    transition: width 0.3s ease;
+    background: linear-gradient(90deg, #f59e0b, #d97706);     /* Gradiente amber-500 -> amber-600 */
+    transition: width 1.0s ease;                              /* Animação suave de crescimento da linha */
 }
 
+/* Ao passar o mouse, a linha cresce */
 .nav-link:hover::after {
     width: 100%;
 }
 
+/* Caso a aba esteja ativa, a linha já aparece inteira */
 .active::after {
     width: 100%;
 }
 
+
+/* Animação contínua de "flutuação" (vai pra cima e desce) */
 .floating {
-    animation: floating 3s ease-in-out infinite;
+    animation: floating 6s ease-in-out infinite;     /* Usa a keyframe abaixo, com transição suave, para sempre */
 }
 
+/* Define os quadros da animação 'floating' */
 @keyframes floating {
     0% {
+        /* Posição inicial do elemento: sem deslocamento vertical */
         transform: translateY(0px);
+        
+        /* Sombra padrão no início da animação */
+        box-shadow: 
+            0 20px 50px -5px rgba(146, 64, 14, 0.25),   /* amber-700 */
+            0 10px 30px -5px rgba(120, 53, 15, 0.10);   /* amber-800 */
     }
-
     50% {
-        transform: translateY(-15px);
+        /* No meio da animação, o elemento sobe 80px */
+        transform: translateY(-80px);
+        
+        /* Sombra maior e mais difusa para simular elevação */
+        box-shadow: 
+            0 20px 50px -5px rgba(146, 64, 14, 0.90),   /* amber-700 */
+            0 10px 30px -5px rgba(202, 138, 4, 0.8);    /* amber-400 */
     }
-
     100% {
+        /* Volta para a posição inicial */
         transform: translateY(0px);
+        
+        /* Sombra volta ao estado inicial */
+        box-shadow: 
+            0 20px 50px -5px rgba(146, 64, 14, 0.25),   /* amber-700 */
+            0 10px 30px -5px rgba(120, 53, 15, 0.10);   /* amber-800 */
     }
 }
 
+/* Animação horizontal contínua */
+@keyframes float-horizontal {
+  0% {
+    transform: translateX(0);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  }
+  50% {
+    transform: translateX(-50px); /* Move para a esquerda */
+    box-shadow: 0 20px 50px -5px rgba(202, 138, 4, 0.90); /* sombra inclinada amber-400 */
+  }
+  100% {
+    transform: translateX(0);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.animate-float-horizontal {
+  animation: float-horizontal 4.5s ease-in-out infinite;
+}
+
+/* Estilo global para todos os elementos */
+/* Estilo global para todos os elementos */
 * {
-    background-color: inherit;
-    color: #030303;
-    /* se quiser forçar o texto claro também */
+    background-color: inherit;   /* Garante que os elementos herdem o fundo do pai */
+    color: #ca8a04;              /* Cor do texto (amber-500) */
 }
