@@ -10,7 +10,7 @@ Este portfólio foi desenvolvido com foco em **performance**, **responsividade**
 
 ## 🔗 Acesse o site direto aqui:
 
-[![Ver Portfólio](https://img.shields.io/badge/👨‍💻-Ver%20Portfólio-blue?style=for-the-badge&logo=github)](https://joneidson.github.io/Portfolio-pessoal/)
+[![Ver Portfólio](https://img.shields.io/badge/👨‍💻-Ver%20Portfólio-blue?style=for-the-badge&logo=github)]https://joneidson.github.io/Portfolio-pessoal/
 
 ---
 
