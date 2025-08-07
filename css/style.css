@@ -136,3 +136,7 @@ html, body {
     background-color: inherit;   /* Garante que os elementos herdem o fundo do pai */
     color: #ca8a04;              /* Cor do texto (amber-500) */
 }
+.project-card:hover .h-48 {
+  overflow: visible;
+  height: auto;                    /* Permite que a imagem cresça naturalmente */
+}
