@@ -7,6 +7,9 @@ Bem-vindo ao repositório do meu portfólio pessoal! Aqui você encontrará uma 
 ## ✨ Visão Geral
 
 Este portfólio foi desenvolvido com foco em **performance**, **responsividade** e **design moderno**, utilizando tecnologias como **Tailwind CSS**, **Font Awesome**, e integração de bibliotecas JS.
+## 📢 Quer usar ou contribuir?
+
+Se você clonou este projeto, considere deixar uma ⭐️ ou abrir uma Issue para dizer como pretende usar! Isso nos ajuda a melhorar o projeto 😊
 
 ## 🔗 Acesse o site direto aqui:
 
